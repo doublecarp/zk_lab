@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 600px;
+    margin: 0 auto;
+/*    网页居中*/
+    font: 14px Arial,'Microsoft YaHei';
+/*font 的简写样式*/
+}
+.news-item::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.top{
+    background: rgb(238, 238, 238);
+    height: 30px;
+    text-align: center;
+    /*水平居中*/
+    line-height: 30px;
+/* height=line-height-》垂直居中*/
+}
+
+.right{
+    width: 370px;
+    float: left;
+}
+.news-item{
+    padding: 18px 0 20px 0px;
+    position: relative;
+}
+.news-item .image{
+    /*图片*/
+    float: left;
+    width: 213px;
+    height: 142px;
+    overflow: hidden;
+    /*图片如果超出了这个div，那么就就会隐藏*/
+    margin-right: 17px;
+}
+.news-item .image{
+    will-change: transform;
+    transition: transform ease-in-out .5s;
+}
+.news-item.image:hover{
+/*    鼠标悬停上方时*/
+    transform: scale(1.2,1.2);
+
+}
+
+h2{
+    font-size: 19px;
+    font-weight: bold;
+}
+.right .tag{
+    font-size: 13px;
+    color: #333;
+}
+.bottom{
+    position: absolute;
+    height: 20px;
+    width: 370px;
+    bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    left: 220px;
+}
+ .bottom .time{
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    color: #555555;
+}
+ .bottom .remark{
+    position: absolute;
+    right: 0;
+    color: #333;
+}
+

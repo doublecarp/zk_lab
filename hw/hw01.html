@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .wrapper{
+        width:350px;
+        margin: 10px auto;
+        background-color: rgb(230, 230, 250);
+    }
+    .row{
+        height: 50px;
+        line-height: 50px;
+    }
+    label{
+        display: inline-block;
+        width: 120px;
+        text-align: right;
+    /*行内块显示加文字右对齐这样子就可以靠近右边文字又起到对齐效果*/
+    }
+    .row>div{
+        display: inline-block;
+    }
+    .row>div input{
+        margin-right: 5px;
+    }
+    .row>div input:nth-child(2) {
+        margin-left: 20px;
+    }
+    .row>select{
+        height: 25px;
+        background: rgb(234, 255, 234);
+        border: 2px solid rgb(32, 178, 170) ;
+    }
+    .row>input{
+        width: 200px;
+        height:25px ;
+        border: 2px solid rgb(32, 178, 170);
+        background: rgb(234, 255, 234);
+        border-radius: 5px;
+    }
+    .last{
+        margin-left: 120px;
+        width: 100px;
+        height: 35px;
+    }
+    .last>input{
+        width: 90px;
+        height: 30px;
+    }
+
+</style>
+<body>
+<div class="wrapper">
+    <form action="01.php" method="post">
+        <div class="row">
+            <label for="tel">我的手机号：</label>
+            <input type="text" id="tel" name="tel">
+        </div>
+        <div class="row">
+            <label for="password">创建密码：</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="row">
+            <label for="nickname"> id:</label>
+            <input type="text" id="nickname" name="nickname">
+        </div>
+
+        <div class="row">
+            <label for="sex">性别：</label>
+            <div>
+                <input type="radio" name="sex" id="sex" value="男" checked="checked">男
+                <input type="radio" name="sex" id="sex" value="女">女
+            </div>
+        </div>
+        <div class="row">
+            <label for="location">所在地：</label>
+            <select name="location" id="location">
+                <option value="0">广州</option>
+                <option value="1">深圳</option>
+                <option value="2">上海</option>
+                <option value="3">北京</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="code">手机验证码</label>
+            <input type="text" id="code" name="code">
+        </div>
+        <div class="last">
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</div>
+
+</body>
+<p></p>
+</html>
