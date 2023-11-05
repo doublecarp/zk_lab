@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单设计</title>
+  <style type="text/css">
+
+    .div1 { /*最大的div*/
+      width: 550px; /*设置宽度*/
+      margin: 0px auto; /*div在浏览器中居中显示*/
+      border: gray 5px double; /*设置边框*/
+      font-size: 14px; /*设置字体大小*/
+    }
+
+    .div2, .div3 {
+      padding-top: 10px; /*设置每个小div距离上一个div10px*/
+    }
+
+    .div3 {
+      text-align: center; /*设置按钮居中对齐*/
+    }
+
+    .span1 {
+      display: inline-block; /*设置类选择器*/
+      text-align: right; /*右边对齐*/
+      width: 150px; /*宽度*/
+      line-height: 30px; /*span的高度*/
+    }
+
+    .span3 {
+      color: gray; /*设置颜色*/
+    }
+
+    input {
+      line-height: 30px; /*设置高度*/
+      color: gray; /*设置颜色*/
+    }
+
+    .input1 {
+      width: 200px;
+      line-height: 30px; /*设置高度*/
+      margin: 0px auto; /*居中对齐*/
+      color: black; /*设置颜色*/
+    }
+
+    .input1:hover {
+      background-color: pink; /*悬浮变化颜色*/
+    }
+
+    .input2 {
+      color: black; /*设置颜色*/
+    }
+
+
+    .alert {
+      width: 150px; /*设置宽度*/
+      line-height: 20px; /*设置高度*/
+      vertical-align: middle; /**/
+      position: relative; /*设置标签关系*/
+      top: 5px; /**/
+      font-size: 10px; /*设置字体大小*/
+      background: #FFFECC; /*设置背景颜色*/
+      font-family: Arial simhei; /*设置字体类型*/
+      border: 1px #aaa solid; /*设置边框*/
+      display: inline-block;
+    }
+
+    .btn {
+      background-image: url("images/123.jpg"); /*添加图片*/
+      background-position: -410px -0px; /*背景位置*/
+      width: 153px; /*宽度*/
+      height: 52px; /*高度*/
+      border: 0 none; /*边框*/
+      cursor: pointer; /**/
+      margin-top: 10px; /*距离顶部*/
+    }
+
+    .btn:hover {
+      background-position: -565px -0px; /*悬浮变化后的图片的位置*/
+    }
+  </style>
+</head>
+<body>
+<div class="div1">
+  <form action="" method="post">
+    <div class="div2">
+      <label>
+        <span class="span1">*我的手机号码：</span>
+        <input class="input1" type="text" name="user" size="25" autofocus="autofocus"
+               required="required" pattern="^1[3-9]\d{9}" title="你输入的手机号码不对" placeholder="输入手机号码"/>
+        <input class="input2" type="button" value="免费获取验证码"/>
+      </label>
+    </div>
+    <div class="div2">
+      <span class="span1"></span>
+      <span class="span3">完成注册后，手机号码为你的微博登录号</span>
+    </div>
+    <div class="div2">
+      <label>
+        <span class="span1">*创建密码：</span>
+        <input class="input1" type="password" name="psd" size="25">
+        <span class="alert">为了你的账户安全，请使用与其他网络不同的密码。</span>
+      </label>
+    </div>
+    <div class="div2">
+      <label>
+        <span class="span1">*昵称：</span>
+        <input class="input1" type="text" name="text1" size="25" placeholder="输入昵称"
+               required="required">
+      </label>
+    </div>
+    <div class="div2">
+      <span class="span1">*性别：</span>
+      <label>
+        <input type="radio" name="sex" value="1"/>男
+      </label>
+      <label>
+        <input type="radio" name="sex" value="1"/>女
+      </label>
+    </div>
+    <div class="div2">
+      <span class="span1">*所在地：</span>
+
+      <select name="city" size="1">
+        <option value="1">北京市</option>
+        <option value="2">广州市</option>
+        <option value="3">上海市</option>
+        <option value="4">深圳市</option>
+      </select>
+
+      <select name="area" size="1">
+        <option value="1">海淀区</option>
+        <option value="2">东城区</option>
+        <option value="3">海珠区</option>
+        <option value="4">越秀区</option>
+        <option value="5">福田区</option>
+        <option value="6">黄埔区</option>
+      </select>
+
+    </div>
+    <div class="div2">
+      <span class="span1">*手机验证码：</span>
+      <label><input class="input1" type="text" name="validation" size="5"></label>
+    </div>
+    <div class="div3">
+      <input class="btn" type="submit" value=""/>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>
