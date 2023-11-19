@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="wrapper">
+    <input id="1" type="button" value="弹出对话框计算">
+    <p id="2">结果是：</p>
+</div>
+<script>
+    var buttom=document.getElementById("1");
+    var p=document.getElementById("2");
+    buttom.onclick=cal;
+
+    var fun=function (a) {
+        let oper=a.match(/[\+\-\*\/]/);
+        let num1=(Number)(a.substring(0,oper.index));
+        let num2=(Number)(a.substring(oper.index+1));
+        let value=null;
+        switch (oper[0]){
+            case '+':
+                value= num1+num2;
+                break;
+            case '-':
+                value= num1-num2;
+                break;
+            case '*':
+                value=num1*num2;
+                break;
+            case '/':
+                value=num1/num2;
+        }
+        let pop=a+'='+value;
+        alert(pop);
+        return pop;
+    }
+
+    function cal(){
+        let answer=prompt('请输入算式', '1+2');
+
+    if(answer!=null){
+            let fin=fun(answer);
+            p.innerHTML+=fin;
+        }
+    }
+
+</script>
+</body>
+</html>
